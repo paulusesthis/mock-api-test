@@ -5,13 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
 </head>
 
-<body>
-    <div>
-        <h1>Task App</h1>
-        <input type="text" placeholder="Enter a text" id="taskInput">
-        <button onclick="addTask()">Add Task</button>
+<body class="bg-gray-100 min-h-screen flex items-start justify-center">
+    <div class="max-w-md w-full mt-10 p-6 bg-white rounded-2xl shadow-lg space-y-4">
+        <h1 class="text-2xl font-bold text-gray-800 text-center">Task App</h1>
+
+        <input type="text" placeholder="Enter a task" id="taskInput"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+        <button onclick="addTask()" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition">
+            Add Task
+        </button>
+
+        <!--task list-->
+        <ul id="taskList" class="space-y-2 pt-2"></ul>
+
     </div>
 </body>
 
